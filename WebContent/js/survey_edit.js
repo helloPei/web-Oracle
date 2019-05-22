@@ -65,6 +65,7 @@ $(document).ready(function(e){
 	$(".del").live("click", function() { 
 		$(this).parent(".kzqy_czbut").parent(".movie_box").remove(); 
 		var xh_num = 0;
+		//重新编号
 		$(".yd_box").find(".movie_box").each(function(){
 			xh_num++;
 			$(".yd_box").children(".movie_box").eq(xh_num-1).find(".nmb").text(xh_num);
