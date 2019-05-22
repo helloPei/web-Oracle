@@ -112,11 +112,13 @@
 <script src="js/jquery-1.8.0.min.js"></script>
 <script src="js/survey_edit.js"></script>
 <script>
+var num = 0;
 //添加单选题
 function addSingle(){
+	num++;
 	var leng = $(".yd_box").children(".movie_box").length;
-	$(".yd_box").append("<div class='movie_box single"+leng+"'></div>");
-	$(".single"+leng+"").append(
+	$(".yd_box").append("<div class='movie_box que_"+num+"'></div>");
+	$(".que_"+num+"").append(
 			"<ul class='wjdc_list'>"
 			+"<li><div class='tm_btitlt'><i class='nmb'>"+(1+leng)+"</i>. <i class='btwenzi'>单选题题目编辑？</i></div></li>"
 			+"<li><label><input name='a' type='radio' value=''><span>选项编辑</span></label></li>"
@@ -127,9 +129,10 @@ function addSingle(){
 }
 //添加多选题
 function addMulti(){
+	num++;
 	var leng = $(".yd_box").children(".movie_box").length;
-	$(".yd_box").append("<div class='movie_box multi"+leng+"'></div>");
-	$(".multi"+leng+"").append(
+	$(".yd_box").append("<div class='movie_box que_"+num+"'></div>");
+	$(".que_"+num+"").append(
 			"<ul class='wjdc_list'>"
 			+"<li><div class='tm_btitlt'><i class='nmb'>"+(1+leng)+"</i>. <i class='btwenzi'>多选题题目编辑？</i><span class='tip_wz'>【多选】</span></div></li>"
 			+"<li><label><input name='' type='checkbox' value=''><span>选项编辑</span></label></li>"
@@ -140,9 +143,10 @@ function addMulti(){
 }
 //填空题
 function addBlank(){
+	num++;
 	var leng = $(".yd_box").children(".movie_box").length;
-	$(".yd_box").append("<div class='movie_box blank"+leng+"'></div>");
-	$(".blank"+leng+"").append(
+	$(".yd_box").append("<div class='movie_box que_"+num+"'></div>");
+	$(".que_"+num+"").append(
 			"<ul class='wjdc_list'>"
 			+"<li><div class='tm_btitlt'><i class='nmb'>"+(1+leng)+"</i>.  <i class='btwenzi'>填空题题目编辑？</i><span class='tip_wz'>【填空】</span></div></li>"
 			+"<li><label><textarea name='' cols='' rows='' class='input_wenbk btwen_text btwen_text_dx' onblur='if(!this.value)this.value='单选题目'' onclick='if(this.value&&this.value=='单选题目') this.value='''></textarea></label></li>"
